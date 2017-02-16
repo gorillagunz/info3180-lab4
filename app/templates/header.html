@@ -14,7 +14,11 @@
             <li class="active"><a href="{{ url_for('home') }}">Home</a></li>
             <li><a href="{{ url_for('about') }}">About</a></li>
             <li><a href="{{ url_for('add_file') }}">File Upload</a></li>
-            <li><a href="{{ url_for('filelisting') }}">Uploaded Files</a></li>
+            {% if not session.logged_in %}
+              <li><a></a></li>
+            {% else %}
+              <li><a href="{{ url_for('filelisting') }}">Uploaded Files</a></li>
+            {% endif %}
           </ul>
           <ul class="nav navbar-nav navbar-right">
             {% if not session.logged_in %}

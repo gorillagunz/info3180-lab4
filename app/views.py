@@ -73,7 +73,7 @@ def iterate():
     rootdir = os.getcwd()
     for subdir, dirs, files in os.walk(rootdir + "/app/static/uploads"): 
         for file in files:
-             filez.append(os.path.join(subdir,file))
+             filez.append(file)
         return filez   
             
 ###
