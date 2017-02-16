@@ -63,10 +63,7 @@ def logout():
 @app.route('/filelisting')
 def filelisting():
     return render_template("afiles.html", files= iterate())
-    #for files in iterate():
-     #   print "<ul>"
-      #  print "<li>" +files+"</li>"
-       # print "</ul>"
+   
     
 def iterate():
     filez=[]
